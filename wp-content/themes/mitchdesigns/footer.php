@@ -9,7 +9,7 @@
       <?php include_once 'theme-parts/footer/mobile.php';?>
   </footer>
   
-    <a class="section_whatsapp" href="https://wa.me/201099335774">
+    <a class="section_whatsapp" href="https://wa.me/201098885555">
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/icons/whatsapp.png" alt="" width="25" height="25">
     </a>
        

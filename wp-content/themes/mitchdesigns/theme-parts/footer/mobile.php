@@ -135,12 +135,15 @@ global $language;
 
                 </div>
                 <div class="hotline_and_email">
-                      <a class="hotline" href="tel:11687">
-                          16687
+                      <a class="hotline" href="tel:+02 16687">
+                          +02 16687
                         <img src="<?php echo get_field('icon_call', 'options')  ?>" alt="" Width="20"; height="20";>
                       </a>
                       <a class="mail" href="mailto:info@exceptionpastry.com">
                           info@exceptionpastry.com
+                      </a>
+                      <a class="mail" href="mailto:export@exceptionpastry.com">
+                          export@exceptionpastry.com
                       </a>
                 </div>
                 <img class="payment_icons" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_icons.png" alt="">
