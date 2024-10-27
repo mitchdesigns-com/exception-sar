@@ -123,12 +123,12 @@
         </script>
     <?php } ?>
     <!-- End Calendar -->
-    <div id="popup-banner" class="popup banner">
+    <!-- <div id="popup-banner" class="popup banner">
         <div class="popup__window banner">
             <button type="button" class="popup__close material-icons js-popup-closer">close</button>
             <img src="<?php echo $theme_settings['theme_url']; ?>/assets/img/pop_up.png" alt="popup alt" />
         </div>
-    </div>
+    </div> -->
     <div id="popup-promocode" class="popup promocode">
         <div class="popup__window promocode">
             <button type="button" class="popup__close material-icons js-popup-closer close_mobile">close</button>

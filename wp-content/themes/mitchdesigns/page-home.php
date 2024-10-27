@@ -106,6 +106,6 @@ if ($language == 'en') {
 
 		</div>
 		<!--end page-->
-		<a class="js-popup-opener" href="#popup-banner" style="display:none;"></a>
+		<!-- <a class="js-popup-opener" href="#popup-banner" style="display:none;"></a> -->
 	</div>
 	<?php require_once 'footer.php'; ?>
