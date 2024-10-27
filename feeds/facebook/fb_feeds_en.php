@@ -5,7 +5,7 @@ $xml_header = '<?xml version="1.0"?>
 $xml = new SimpleXMLElement($xml_header);
 $channel = $xml->addChild('channel');
 $channel->addChild('title','Exception Products');
-$channel->addChild('link','https://www.exception-group.com/');
+$channel->addChild('link','https://www.ksa.exception-group.com/');
 $channel->addChild('description','Exception Product List RSS feed');
 
 $args = array(

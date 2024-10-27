@@ -28,7 +28,7 @@ foreach ($all_users as $user) {
     $birthday_month_before = $user_birthday->format('m');
 
     if ($current_month == $birthday_month_before && $current_day == $birthday_day_before) {
-        $response = (send_sms_vl("عيد ميلادك بكره ! كل سنة وانت طيب إكسبشن دايما فكرك بالحلو وعشان الحلو للحلو اطلب تورتة عيد ميلادك من ويب سايت إكسبشن www.exception-group.com", "ar", rand(999, 99999), $phone, "9"));
+        $response = (send_sms_vl("عيد ميلادك بكره ! كل سنة وانت طيب إكسبشن دايما فكرك بالحلو وعشان الحلو للحلو اطلب تورتة عيد ميلادك من ويب سايت إكسبشن www.ksa.exception-group.com", "ar", rand(999, 99999), $phone, "9"));
         log_message("Birthday message sent to " . $first_name . " " . $last_name . " user ID " . $user->ID . " with response " . $response);
     }
 }
