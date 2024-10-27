@@ -70,36 +70,6 @@
               <?php
             }*/
 ?>
-<!-- <li id="product_<?php //echo $product_data['product_id'];?>_block" class="product_widget"
-<?php// if(isset($prod_anim_count)){//echo 'data-aos="fade-left" data-aos-duration="'.$prod_anim_count.'"';}?>
-  >
-  <?php //if(mitch_check_wishlist_product(get_current_user_id(), $product_data['product_id'])){ ?>
-    <!-- <span class="fav_btn favourite" onclick="remove_product_from_wishlist(<?php ////echo $product_data['product_id'];?>);"></span> -->
-  <?php //}else{ ?>
-    <!-- <span class="fav_btn not-favourite" onclick="add_product_to_wishlist(<?php ////echo $product_data['product_id'];?>);"></span> -->
-  <?php //} ?>
-  <!-- <a href="<?php //echo $product_data['product_url'];?>" class="product_widget_box">
-      <div class="img">
-          <img src="<?php //echo $product_data['product_image'];?>" alt="<?php //echo $product_data['product_title'];?>">
-      </div>
-      <div class="text">
-        <div class="sec_info">
-            <h3 class="title">
-              <?php //echo $product_data['product_title'];?>
-              <span>
-              <?php //if(!empty($product_data['product_country_code'])){ ?>
-              <img src="<?php //echo $theme_settings['theme_url'];?>/assets/img/flag/<?php //echo $product_data['product_country_code'];?>.png" alt="">
-              </span>
-              <?php //}?>
-            </h3>
-            <p class="price"><?php //echo $product_data['product_price'].' SAR';?> <?php //echo $theme_settings['curren_currency_ar'];?></p>
-        </div>
-        <div class="open_widget">
-          <span></span>
-        </div>
-      </div>
-  </a> -
-</li>-->
 
 <div class="product_widget">
     <span class="fav_btn not-favourite" onclick="add_product_to_wishlist(149);"></span>

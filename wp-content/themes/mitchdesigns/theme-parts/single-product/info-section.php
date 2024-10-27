@@ -23,16 +23,7 @@
                 ?>
 
 			</div>
-
-
 		</div>
-
-
-		<!-- <pre>
-         <?php// var_dump($arabic_fields) ; ?>
-       </pre> -->
-
-
 		<div class="first">
 			<h3 class="single_title_item"
 				data-type="<?php if($product_fields_data['custom_cake']){echo 'custom' ;}else{echo 'normal' ;} ?>">

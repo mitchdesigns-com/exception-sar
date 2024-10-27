@@ -32,7 +32,6 @@ $collections = false ;
                 </p>
             </div>
             <div class="cart">
-                <!-- <a href="<?php// echo home_url('cart');?>"> -->
                 <a href="#popup-min-cart" class="js-popup-opener">
                     <div class="section_icon_cart">
                         <?php //echo WC()->cart->get_total();?>

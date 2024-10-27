@@ -164,8 +164,6 @@ $user_orders = mitch_get_myorders_list();
 										<td class="table_action">
 											<a <?php $Query = "/myaccount/order-details.php?order_id=". $order_obj->get_id()  ;   ?>
 												href="<?php echo home_url($Query);?>" class="btn_back">
-
-												<!-- <button class="show" type="button"><?php// echo $fixed_string['myaccount_page_orders_show'];?></button> -->
 											</a>
 
 										</td>

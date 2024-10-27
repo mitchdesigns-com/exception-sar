@@ -116,13 +116,6 @@ if(!empty(WC()->cart->applied_coupons)){
                                             }
                                             $attribute_arabic =  get_term_meta($tag_id, 'attribute_in_arabic', true);
                                             $attribute_english = str_replace('-' , '' , $value);
-                                           
-                                            ?>
-                                              <!-- <li> <?php // echo $attribute_name ?> <?php// if($language == 'en'){echo $attribute_english ;}else{echo $attribute_arabic;} ?></li> -->
-                                              
-                                              
-                                           
-                                            <?php
                                           }
                                           ?>
                                           </ul>
@@ -183,7 +176,6 @@ if(!empty(WC()->cart->applied_coupons)){
                               <input class="number_count" type="number" id="number_<?php echo $item;?>" value="<?php echo $values['quantity'];?>" />
                               <button class="decrease" id="decrease" onclick="decreaseValueByID('number_<?php echo $item;?>');update_cart_items('<?php echo $item;?>', 'cart_page');" value="Decrease Value"></button>
                           </div>
-                          <?php// }  ?>
                           <div class="last size">
                             <p class="total_price">
                               <span id="line_subtotal_<?php echo $item;?>"><?php echo number_format($values['line_subtotal']);?></span>

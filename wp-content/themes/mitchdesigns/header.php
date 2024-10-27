@@ -125,7 +125,6 @@
 	<?php
       //if(is_checkout() ){?>
 	<?php wp_head();?>
-	<?php// }?>
     <meta name="google-site-verification" content="4a38qCwfcxHcvp5apKZ94N_74JbqthrCUkKN7mqJG-c" />
 </head>
 <?php

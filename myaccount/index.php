@@ -53,38 +53,7 @@ $user_orders = mitch_get_myorders_list();
 								<h3><?php echo Myaccount_translation('welcome_message_title' , $language) ?></h3>
 								<p><?php echo Myaccount_translation('welcome_message_subtitle' , $language) ?></p>
 							</div>
-							<!-- <div class="right">
-                                <div class="points">
-                                    <div class="title">
-                                        <p><?php //echo Myaccount_translation('wallet_balance' , $language) ?></p>
-                                        <h4><?php //echo 100 ; //$user_points_info->current_points ?> <?php //echo Myaccount_translation('Points_keyword' , $language) ?>
-                                            <span>(<?php// echo 50 ; //$user_points_info->current_points  /  $points_settings['groups'][$user_points_info->level_number]['points_to_currency'] ?>
-                                                SAR)</span>
-                                        </h4>
-                                    </div>
-                                </div>
-
-                            </div> -->
 						</div>
-
-						<!-- Share Link  -->
-						<!-- <div class="sharebutton section">
-                            <h2 class="sharebutton_title"><?php //echo Myaccount_translation('sharebutton_title' , $language) ?></h2>
-                            <p class="sharebutton_subtitle"><?php //echo Myaccount_translation('sharebutton_subtitle' , $language) ?></p>
-                            <div class="details">
-                                <div class="left">
-                                    <img src="<?php// echo get_stylesheet_directory_uri(); ?>/assets/img/MD_myaccount_icon/percent.png" alt="">
-                                    <p class="link_copy">www.exception.com/ref=1-02o0;20409</p>
-                                </div>
-                                <div class="right">
-                                    <button onclick="copyText()">
-                                    <?php// echo Myaccount_translation('link_title_copy' , $language) ?>
-                                    </button>
-                                    <p class='copied-message'> <?php //echo Myaccount_translation('link_title_copied' , $language) ?></p>
-                                </div>
-
-                            </div>
-                        </div> -->
 
 						<?php if(!empty($user_orders)){  ?>
 						<div class="order-details section">

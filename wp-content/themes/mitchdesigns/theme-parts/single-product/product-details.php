@@ -1,7 +1,6 @@
 <div class="sec_product_details">
     <div class="section_parent">
         <div class="product_details">
-              <?php// if(!wp_is_mobile()){ ?>
                 <div class="dropdown_info ">
                     <div class="single_info">
                       <h3 class="title_info"> <?php echo single_translate('long_desc' , $language); ?></h3>
