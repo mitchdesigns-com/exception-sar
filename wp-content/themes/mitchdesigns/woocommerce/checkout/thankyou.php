@@ -536,7 +536,7 @@ require_once get_template_directory() . '/includes/thankyou-actions.php';
 
 			<?php //include_once '../../theme-parts/home/trending-products.php';
 			?>
-			<? php // var_dump(get_template_directory()) 
+			<?php // var_dump(get_template_directory()) 
 			?>
 		<?php endif; ?>
 	<?php else : ?>
