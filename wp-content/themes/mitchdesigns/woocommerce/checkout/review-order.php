@@ -141,7 +141,7 @@ if (isset($_POST['post_data'])) {
 													<?php } else if ($cart_item['product_id'] == 3065) { ?>
 														<?php echo $cart_item['variation']['price']; ?>
 													<?php  } else {
-														echo number_format($one_item_price);
+														echo number_format($one_item_price,2);
 													} ?>
 													<span class="woocommerce-Price-currencySymbol">
 														<?php echo $theme_settings['curren_currency_' . $language]  ?> </span>

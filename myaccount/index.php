@@ -109,7 +109,7 @@ $user_orders = mitch_get_myorders_list();
 
 											<!-- Order Price  -->
 											<td>
-												<?php echo number_format($order_obj->get_total()).' '. $theme_settings['curren_currency_' . $language];?>
+												<?php echo number_format($order_obj->get_total(),2).' '. $theme_settings['curren_currency_' . $language];?>
 											</td>
 
 											<!-- Order Details  -->
@@ -162,7 +162,7 @@ $user_orders = mitch_get_myorders_list();
 													<?php echo $order_obj->get_date_created()->date("j/n/Y");?>
 												</span>
 												<span class="new price">
-													<?php echo number_format($order_obj->get_total()).' '. $theme_settings['curren_currency_' . $language];?>
+													<?php echo number_format($order_obj->get_total(),2).' '. $theme_settings['curren_currency_' . $language];?>
 												</span>
 
 											</td>

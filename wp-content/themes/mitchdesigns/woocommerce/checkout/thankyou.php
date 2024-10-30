@@ -391,12 +391,12 @@ require_once get_template_directory() . '/includes/thankyou-actions.php';
 																<div class="single-price">
 																	<p><span class="woocommerce-Price-amount amount">
 																			<?php if ($product_id != 1730 && $product_id != 3065) {  ?>
-																				<?php echo number_format($price); ?>
+																				<?php echo number_format($price,2); ?>
 
 																				<span class="woocommerce-Price-currencySymbol">
 																					<?php echo  $theme_settings['curren_currency_' . $language]  ?></span>
 																		</span> <?php }  ?> </p>
-																	<?php echo number_format($item->get_subtotal()); ?>
+																	<?php echo number_format($item->get_subtotal(),2); ?>
 																	</p>
 																	<?php
 																	$regular_price = $product->get_regular_price();
@@ -404,10 +404,10 @@ require_once get_template_directory() . '/includes/thankyou-actions.php';
 																</div>
 																<div class="total-price" style="display:none;">
 																	<p>
-																		<?php echo  number_format($item->get_subtotal()) . $theme_settings['curren_currency_' . $language]; ?>
+																		<?php echo  number_format($item->get_subtotal(),2) . $theme_settings['curren_currency_' . $language]; ?>
 																	</p>
 																	<!-- <?php if ($Show_Sale_price) { ?>
-                                                        <p class="sale">  <?php echo $theme_settings['curren_currency_' . $language] .  number_format($item->get_quantity() * $regular_price); ?> </p>
+                                                        <p class="sale">  <?php echo $theme_settings['curren_currency_' . $language] .  number_format($item->get_quantity() * $regular_price,2); ?> </p>
                                                         <?php } ?> -->
 																</div>
 															</div>
@@ -463,7 +463,7 @@ require_once get_template_directory() . '/includes/thankyou-actions.php';
 									<tr class="order-price">
 										<th><?php echo thankyou_translate('thanks_subtotal', $language) ?></th>
 										<td>
-											<?php echo number_format($order->get_subtotal()) . ' ' . $theme_settings['curren_currency_' . $language]; ?>
+											<?php echo number_format($order->get_subtotal(),2) . ' ' . $theme_settings['curren_currency_' . $language]; ?>
 										</td>
 									</tr>
 
@@ -505,7 +505,7 @@ require_once get_template_directory() . '/includes/thankyou-actions.php';
 									<tr class="order-total">
 										<th><?php echo thankyou_translate('thanks_total', $language) ?></th>
 										<td>
-											<?php echo number_format($order->get_total()) . $theme_settings['curren_currency_' . $language]; ?>
+											<?php echo number_format($order->get_total(),2) . $theme_settings['curren_currency_' . $language]; ?>
 											<p class="total_note"> <?php echo thankyou_translate('thanks_vat', $language) ?></p>
 										</td>
 

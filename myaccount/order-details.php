@@ -204,7 +204,7 @@ else {
 										<div class="prices">
 											<div class="single-price">
 												<p>
-													<?php echo  number_format($values['line_total'] / $values['quantity']) .' '. $theme_settings['curren_currency_' . $language];?>
+													<?php echo  number_format($values['line_total'] / $values['quantity'],2) .' '. $theme_settings['curren_currency_' . $language];?>
 												</p>
 												<?php  $regular_price = $product-> get_regular_price(); ?>
 
@@ -212,7 +212,7 @@ else {
 											</div>
 											<div class="total-price">
 												<p>
-													<?php echo number_format($values['line_total']) .' '. $theme_settings['curren_currency_' . $language]  ;?>
+													<?php echo number_format($values['line_total'],2) .' '. $theme_settings['curren_currency_' . $language]  ;?>
 												</p>
 
 											</div>
@@ -278,21 +278,21 @@ else {
 							<div class="subtotal MD-row">
 								<p class="title"><?php echo Myaccount_translation('Order_subtotal' , $language) ?></p>
 								<p class="price">
-									<?php echo   number_format($order_obj->get_subtotal()).' '. $theme_settings['curren_currency_' . $language] ;?>
+									<?php echo   number_format($order_obj->get_subtotal(),2).' '. $theme_settings['curren_currency_' . $language] ;?>
 								</p>
 
 							</div>
 							<div class="shipping MD-row">
 								<p class="title"><?php echo Myaccount_translation('Order_shipping' , $language) ?></p>
 								<p class="price">
-									<?php echo   number_format($order_obj->get_shipping_total()) .' '. $theme_settings['curren_currency_' . $language] ;?>
+									<?php echo   number_format($order_obj->get_shipping_total(),2) .' '. $theme_settings['curren_currency_' . $language] ;?>
 								</p>
 							</div>
 							<?php if($order_obj->get_total_fees() < 0){ ?>
 							<div class="discount MD-row">
 								<p class="title"><?php echo Myaccount_translation('Order_payondelivery' , $language) ?> </p>
 								<p class="price">
-									<?php echo   number_format($order_obj->get_total_fees()) .' '. $theme_settings['curren_currency_' . $language] ;?>
+									<?php echo   number_format($order_obj->get_total_fees(),2) .' '. $theme_settings['curren_currency_' . $language] ;?>
 								</p>
 							</div>
 							<?php  } ?>
@@ -301,14 +301,14 @@ else {
 							<div class="coupon MD-row">
 								<p class="title">Coupon</p>
 								<p class="price">
-									<?php echo   number_format( -$coupon->get_amount()) .' '. $theme_settings['curren_currency_' . $language] ;?>
+									<?php echo   number_format( -$coupon->get_amount(),2) .' '. $theme_settings['curren_currency_' . $language] ;?>
 								</p>
 							</div>
 							<?php }  ?>
 							<div class="total MD-row">
 								<p class="title"><?php echo Myaccount_translation('Order_total' , $language) ?></p>
 								<p class="price">
-									<?php echo   number_format($order_obj->get_total()) .' '. $theme_settings['curren_currency_' . $language] ;?>
+									<?php echo   number_format($order_obj->get_total(),2) .' '. $theme_settings['curren_currency_' . $language] ;?>
 								</p>
 							</div>
 						</div>

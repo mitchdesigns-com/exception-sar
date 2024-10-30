@@ -289,8 +289,8 @@ function Admin_points_controller_callback() {
                     echo '<td> </td>';
                 }
                 echo '<td style="padding: 0 20px;" >' . $result->current_points . ' </td>';
-                echo '<td style="padding: 0 20px;" >' . number_format($result->current_cash) . ' SAR </td>';
-                echo '<td style="padding: 0 20px;" >' . number_format($result->total_money) . ' SAR </td>';
+                echo '<td style="padding: 0 20px;" >' . number_format($result->current_cash,2) . ' SAR </td>';
+                echo '<td style="padding: 0 20px;" >' . number_format($result->total_money,2) . ' SAR </td>';
                 echo '<td style="padding: 0 20px;" >' . ucfirst($result->user_type) . '</td>';
                 ?>
                 <td style="padding: 0 20px;" ><a href="<?php echo $actual_link . '&user_id=' . $result->user_id ?>"> View User History </a></td>
