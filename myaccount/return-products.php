@@ -112,7 +112,7 @@ else {
                                                 </div>
 
                                                 <div class="prices">
-                                                <p><?php echo 'SAR ' . number_format($values['line_total'] / $values['quantity']);?></p>
+                                                <p><?php echo 'SAR ' . number_format($values['line_total'] / $values['quantity'],2);?></p>
                                                 </div>
                                             </div>
                                         </div>

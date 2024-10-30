@@ -53,7 +53,7 @@ $cart = WC()->cart->get_cart(); ?>
 			</div>
 			<div class="sec_bottom">
 				<div class="price">
-					<p> <?php echo $product_data['product_price'] ? number_format($product_data['product_price']) : '0'; ?>
+					<p> <?php echo $product_data['product_price'] ? number_format($product_data['product_price'],2) : '0'; ?>
 						<?php echo $theme_settings['curren_currency_' . $language]; ?></p>
 					<?php if ($product_data['product_type'] == 'simple' && $product_data['product_is_sale_simple'] == 1) { ?>
 						<span class="discount"> <?php echo $product_data['product_regular_price'] ?>

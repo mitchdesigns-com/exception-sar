@@ -127,9 +127,9 @@ if(!empty(WC()->cart->applied_coupons)){
                                         <?php
                                         if($item_product_id != 1730  && $item_product_id != 3065){
                                           if(!empty($values['custom_cart_data'])){
-                                            echo number_format(($values['line_subtotal'] / $values['quantity']));
+                                            echo number_format(($values['line_subtotal'] / $values['quantity']),2);
                                           }else{
-                                            echo number_format($cart_product_data['product_price']);
+                                            echo number_format($cart_product_data['product_price'],2);
                                           }
                                          echo $theme_settings['curren_currency_' . $language];
                                         }
@@ -155,14 +155,14 @@ if(!empty(WC()->cart->applied_coupons)){
                               <p>
                                 <?php
                                 if($item_product_id == 1730){
-                                  echo  number_format($values['variation']['selected_price']);
+                                  echo  number_format($values['variation']['selected_price'],2);
                                 }else if($item_product_id == 3065){
-                                  echo  number_format($values['variation']['price']);
+                                  echo  number_format($values['variation']['price'],2);
                                 }else{
                                   if(!empty($values['custom_cart_data'])){
-                                    echo number_format(($values['line_subtotal'] / $values['quantity']));
+                                    echo number_format(($values['line_subtotal'] / $values['quantity']),2);
                                   }else{
-                                    echo number_format($cart_product_data['product_price']);
+                                    echo number_format($cart_product_data['product_price'],2);
                                   }
                                 }
                                
@@ -178,7 +178,7 @@ if(!empty(WC()->cart->applied_coupons)){
                           </div>
                           <div class="last size">
                             <p class="total_price">
-                              <span id="line_subtotal_<?php echo $item;?>"><?php echo number_format($values['line_subtotal']);?></span>
+                              <span id="line_subtotal_<?php echo $item;?>"><?php echo number_format($values['line_subtotal'],2);?></span>
                               <?php echo $theme_settings['curren_currency_' . $language];?>
                             </p>
                             <a class="remove_page_cart" href="javascript:void(0);" onclick="cart_remove_item('<?php echo $item;?>', '');"><?php echo cart_page('remove' , $language); ?></a>
@@ -196,7 +196,7 @@ if(!empty(WC()->cart->applied_coupons)){
                           <p> <?php echo cart_page('total' , $language); ?></p>
                           <div class="sec_price">
                             <span class="cart_total" id="cart_total">
-                              <?php echo number_format(WC()->cart->cart_contents_total);?> 
+                              <?php echo number_format(WC()->cart->cart_contents_total,2);?> 
                               <?php echo $theme_settings['curren_currency_' . $language];?>
                             </span>
                             <!-- <span id="cart_total" class="cart_total discount"><?php //echo WC()->cart->cart_contents_total;?> <?php //echo $theme_settings['curren_currency_' . $language];?></span>  -->

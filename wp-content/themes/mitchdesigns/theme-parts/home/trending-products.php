@@ -42,7 +42,7 @@
                             </div>
                             <div class="sec_info">
                                 <h3 class="title"><?php echo $product_data['product_title'];?></h3>
-                                <p class="price"><?php echo number_format($product_data['product_price']);?>
+                                <p class="price"><?php echo number_format($product_data['product_price'],2);?>
                                     <?php echo $theme_settings['curren_currency_ar'];?></p>
                             </div>
                         </a>

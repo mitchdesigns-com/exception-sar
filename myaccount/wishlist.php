@@ -106,7 +106,7 @@ $WishLish_Products = mitch_get_wishlist_products();
                                                         </div>
                                                         <div class="sec_bottom">
                                                             <div class="price">
-                                                                <p> <?php echo number_format($product_data['product_price']);?> <?php echo $theme_settings['curren_currency_' . $language];?></p>
+                                                                <p> <?php echo number_format($product_data['product_price'],2);?> <?php echo $theme_settings['curren_currency_' . $language];?></p>
                                                                 <?php if( $product_data['product_type'] == 'simple' && $product_data['product_is_sale_simple'] == 1 ){ ?>
                                                                 <span class="discount"> <?php echo $product_data['product_regular_price'] ?> <?php echo $theme_settings['curren_currency_' . $language]; ?>  </span>
                                                                 <?php }else if($product_data['product_type'] != 'simple' && ($product_data['product_variable_regular_price'] != $product_data['product_price'])) {  ?>

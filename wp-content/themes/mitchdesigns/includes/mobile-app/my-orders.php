@@ -88,10 +88,10 @@ function get_orders_details_callback(WP_REST_Request $request)
         "items" => $items,
         "shipping" => $shipping ,
         "payment_method" => $order_obj->get_payment_method(),
-        "subtotal" => number_format($order_obj->get_subtotal()),
-        "shipping_fees" => number_format($order_obj->get_shipping_total()),
-        "discount" => number_format($order_obj->get_discount_total()),
-        "total" => number_format($order_obj->get_total()),
+        "subtotal" => number_format($order_obj->get_subtotal(),2),
+        "shipping_fees" => number_format($order_obj->get_shipping_total(),2),
+        "discount" => number_format($order_obj->get_discount_total(),2),
+        "total" => number_format($order_obj->get_total(),2),
 
     ];
     return new WP_REST_Response($data, 200);

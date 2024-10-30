@@ -76,7 +76,7 @@
 			<?php if ($product_id == '1730') { ?>
 			<!-- (لا يقل المبلغ عن <?php  //echo $product_fields_data['amount_less'] ;?>) -->
 			<?php }else{  ?>
-			<?php echo number_format($single_product_data['main_data']->get_price());?>
+			<?php echo number_format($single_product_data['main_data']->get_price(),2);?>
 			<?php echo $theme_settings['curren_currency_' . $language]; ?>
 			<?php } ?>
 			<?php
@@ -90,7 +90,7 @@
             if(!empty($product_price)){
               ?>
 			<span
-				class="discount"><?php echo number_format($product_price).' '.$theme_settings['curren_currency_' . $language];?></span>
+				class="discount"><?php echo number_format($product_price,2).' '.$theme_settings['curren_currency_' . $language];?></span>
 			<?php
             }
           }

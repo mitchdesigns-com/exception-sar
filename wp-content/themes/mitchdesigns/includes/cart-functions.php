@@ -374,7 +374,7 @@ function mitch_update_cart_items(){
       }
     }
 
-    $item_total = number_format($item_total);
+    $item_total = number_format($item_total,2);
     // var_dump(WC()->cart->get_cart_contents_count());
     // exit;
     echo json_encode(array(
@@ -606,7 +606,7 @@ function mitch_get_cart_content($lang){
                       <div class="info_bottom">
                        
                         <div class="price">
-                              <p class="total_price"><span id="line_subtotal_'.$item.'">'.number_format($values['line_subtotal']).'</span> '.$theme_settings['curren_currency_' . $lang].'</p>
+                              <p class="total_price"><span id="line_subtotal_'.$item.'">'.number_format($values['line_subtotal'],2).'</span> '.$theme_settings['curren_currency_' . $lang].'</p>
                         </div>
                         <div class="section_qty">
 
@@ -647,10 +647,10 @@ function mitch_get_cart_content($lang){
         <div class="info_min_cart">
           <h4>'.cart_page('total' , $lang).'</h4>
           <div class="sec_price">
-            <p class="price">'.number_format(WC()->cart->cart_contents_total).'</span> '.$theme_settings['curren_currency_' . $lang].'</p>' ;
+            <p class="price">'.number_format(WC()->cart->cart_contents_total,2).'</span> '.$theme_settings['curren_currency_' . $lang].'</p>' ;
             if(WC()->cart->cart_contents_total != WC()->cart->subtotal){
               $cart_content = $cart_content . '
-            <p class="price-discount">'.number_format(WC()->cart->subtotal).'</span> '.$theme_settings['curren_currency_' . $lang].'</p> ' ;
+            <p class="price-discount">'.number_format(WC()->cart->subtotal,2).'</span> '.$theme_settings['curren_currency_' . $lang].'</p> ' ;
             }
             $cart_content = $cart_content . '
             <span class="qun">'.$cart_items_count.' Item</span>

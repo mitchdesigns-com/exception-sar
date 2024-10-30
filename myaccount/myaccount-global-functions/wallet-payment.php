@@ -77,7 +77,7 @@ class WC_Wallet_Payment extends WC_Payment_Gateway {
           $user_points_info = MD_get_user_points_info($current_user->ID);
           $user_cash = $user_points_info -> current_points / $points_settings['groups'][$user_points_info -> level_number]['points_to_currency'];
 
-          $msg = $msg .  number_format($user_points_info->current_points) . ' Point = ' . $user_cash . ' SAR ]' ; 
+          $msg = $msg .  number_format($user_points_info->current_points,2) . ' Point = ' . $user_cash . ' SAR ]' ; 
   
         }
         echo $msg ;
