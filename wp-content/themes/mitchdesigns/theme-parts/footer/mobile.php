@@ -166,7 +166,7 @@ global $language;
         <div class="bottom">
             <div class="bottom_text">
                 <p class="copy_right">
-                    <?php echo ($language == 'en')? 'All Copyrights belong to Exception 2024 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٤' ?>©<?php echo date('Y');?>
+                    <?php echo ($language == 'en')? 'All Copyrights belong to Exception 2024 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٤' ?>©
                 </p>
             </div>
 
