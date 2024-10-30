@@ -14,40 +14,49 @@ global $language;
             <div class="logo">
                 <a href="<?php echo $theme_settings['site_url'];?><?php echo ($language == 'en')? '/?lang=en':'' ?>">
                     <?php if( $language == 'en') : ?>
-                        <img src="<?php echo $theme_settings['logo_white_en'];?>" alt="">
-                      <?php   else : ?>
-                        <img src="<?php echo $theme_settings['logo_white'];?>" alt="">
+                    <img src="<?php echo $theme_settings['logo_white_en'];?>" alt="">
+                    <?php   else : ?>
+                    <img src="<?php echo $theme_settings['logo_white'];?>" alt="">
                     <?php endif; ?>
                 </a>
             </div>
             <div class="section_middle">
-                  <div class="section_info">
-                    <img src="<?php echo $footer_builder['footer_col_no_4']['top_section_icon'];?>" alt="" width= "60"; height="60";>
+                <div class="section_info">
+                    <img src="<?php echo $footer_builder['footer_col_no_4']['top_section_icon'];?>" alt="" width="60" ;
+                        height="60" ;>
                     <h4><?php echo $footer_builder['footer_col_no_4']['top_section_title'];?></h4>
                     <p><?php echo $footer_builder['footer_col_no_4']['top_section_content'];?></p>
-                  </div>
-                  <div class="company_social">
-                        <form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="5B5E7037DA78A748374AD499497E309EBD4FD93D83AE192A4077722EB77853D107B10944740F76D968E33B58EBF83194A3128205A62C43FCE1B98CB79001F4BA">
-                              <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email" id="fieldEmail" maxlength="200" name="cm-bhhxdj-bhhxdj" required="" type="email" placeholder="<?php echo ($language == 'en')? 'Enter the email address':'أدخل عنوان البريد الالكتروني' ?>">
-                          <button class="btn" type="submit"><?php echo ($language == 'en')? 'Subscribe':'أشترك' ?></button>
-                        </form>
-                      <script type="text/javascript" src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
-                  </div>
+                </div>
+                <div class="company_social">
+                    <form class="js-cm-form" id="subForm"
+                        action="https://www.createsend.com/t/subscribeerror?description=" method="post"
+                        data-id="5B5E7037DA78A748374AD499497E309EBD4FD93D83AE192A4077722EB77853D107B10944740F76D968E33B58EBF83194A3128205A62C43FCE1B98CB79001F4BA">
+                        <input autocomplete="Email" aria-label="Email" class="js-cm-email-input qa-input-email"
+                            id="fieldEmail" maxlength="200" name="cm-bhhxdj-bhhxdj" required="" type="email"
+                            placeholder="<?php echo ($language == 'en')? 'Enter the email address':'أدخل عنوان البريد الالكتروني' ?>">
+                        <button class="btn"
+                            type="submit"><?php echo ($language == 'en')? 'Subscribe':'أشترك' ?></button>
+                    </form>
+                    <script type="text/javascript"
+                        src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js"></script>
+                </div>
             </div>
             <div class="section_end">
                 <?php //$footer_builder = get_field('footer_builder_en', 'option'); ?>
                 <div class="menu">
-                        <?php
+                    <?php
                         // echo '<pre>';
                         // var_dump($footer_builder);
                         // echo '</pre>';
                         if(!empty($footer_builder['footer_col_no_1']['items'])){
                           ?>
-                          <ul class="single_menu">
-                            <?php if($footer_builder['footer_col_no_1']['title'] ): ?>
-                              <li><h5><?php echo $footer_builder['footer_col_no_1']['title'];?></h5></li>
-                            <?php endif; ?>
-                            <?php
+                    <ul class="single_menu">
+                        <?php if($footer_builder['footer_col_no_1']['title'] ): ?>
+                        <li>
+                            <h5><?php echo $footer_builder['footer_col_no_1']['title'];?></h5>
+                        </li>
+                        <?php endif; ?>
+                        <?php
                             foreach($footer_builder['footer_col_no_1']['items'] as $item_obj){
                               if($item_obj['type'] == 'page'){
                                 $item_title = '';
@@ -60,22 +69,24 @@ global $language;
                                 $item_title = $item_obj['custom_title'];
                               }
                               ?>
-                              <li>
-                                <a href="<?php echo $item_url;?><?php echo ($language == 'en')? '/?lang=en':'' ?>">
-                                  <?php echo $item_title;?>
-                                </a>
-                              </li>
-                              <?php
+                        <li>
+                            <a href="<?php echo $item_url;?><?php echo ($language == 'en')? '/?lang=en':'' ?>">
+                                <?php echo $item_title;?>
+                            </a>
+                        </li>
+                        <?php
                             }
                             ?>
-                          </ul>
-                          <?php
+                    </ul>
+                    <?php
                         }
                         if(!empty($footer_builder['footer_col_no_2']['items'])){
                           ?>
-                          <ul class="single_menu">
-                            <li><h5><?php echo $footer_builder['footer_col_no_2']['title'];?></h5></li>
-                            <?php
+                    <ul class="single_menu">
+                        <li>
+                            <h5><?php echo $footer_builder['footer_col_no_2']['title'];?></h5>
+                        </li>
+                        <?php
                                 if(!empty($footer_builder['footer_col_no_2']['items'])){
                                 foreach($footer_builder['footer_col_no_2']['items'] as $item_obj){
                                 if($item_obj['type'] == 'page'){
@@ -89,20 +100,22 @@ global $language;
                                   $item_title = $item_obj['custom_title'];
                                 }
                                 ?>
-                                <li>
-                                  <a href="<?php echo $item_url;?><?php echo ($language == 'en')? '/?lang=en':'' ?>">
-                                    <?php echo $item_title;?>
-                                  </a>
-                                </li>
-                              <?php } } ?>
-                          </ul>
-                          <?php
+                        <li>
+                            <a href="<?php echo $item_url;?><?php echo ($language == 'en')? '/?lang=en':'' ?>">
+                                <?php echo $item_title;?>
+                            </a>
+                        </li>
+                        <?php } } ?>
+                    </ul>
+                    <?php
                         }
                         if(!empty($footer_builder['footer_col_no_3']['items'])){
                           ?>
-                          <ul class="single_menu">
-                                <li><h5><?php echo $footer_builder['footer_col_no_3']['title'];?></h5></li>
-                                    <?php
+                    <ul class="single_menu">
+                        <li>
+                            <h5><?php echo $footer_builder['footer_col_no_3']['title'];?></h5>
+                        </li>
+                        <?php
                                       if(!empty($footer_builder['footer_col_no_3']['items'])){
                                       foreach($footer_builder['footer_col_no_3']['items'] as $item_obj){
                                       // var_dump($item_obj['page']);
@@ -118,40 +131,43 @@ global $language;
                                       }
                                       if(!is_user_logged_in() && strpos($item_obj['page'], 'my-account') !== false){
                                     ?>
-                                <li>
-                                    <a class="title_myaccount login js-popup-opener" href="#popup-login">
-                                      <?php echo $item_title;?>
-                                    </a>
-                                </li>
-                                <?php }else{ ?>
-                                  <li>
-                                    <a href="<?php echo $item_url;?>">
-                                      <?php echo $item_title;?>
-                                    </a>
-                                  </li>
-                                <?php } } } ?> 
-                          </ul>
-                        <?php } ?>
+                        <li>
+                            <a class="title_myaccount login js-popup-opener" href="#popup-login">
+                                <?php echo $item_title;?>
+                            </a>
+                        </li>
+                        <?php }else{ ?>
+                        <li>
+                            <a href="<?php echo $item_url;?>">
+                                <?php echo $item_title;?>
+                            </a>
+                        </li>
+                        <?php } } } ?>
+                    </ul>
+                    <?php } ?>
 
                 </div>
                 <div class="hotline_and_email">
-                      <a class="hotline" href="tel:+02 16687">
-                          +02 16687
-                        <img src="<?php echo get_field('icon_call', 'options')  ?>" alt="" Width="20"; height="20";>
-                      </a>
-                      <a class="mail" href="mailto:info@exceptionpastry.com">
-                          info@exceptionpastry.com
-                      </a>
-                      <a class="mail" href="mailto:export@exceptionpastry.com">
-                          export@exceptionpastry.com
-                      </a>
+                    <a class="hotline" href="tel:+02 16687">
+                        +02 16687
+                        <img src="<?php echo get_field('icon_call', 'options')  ?>" alt="" Width="20" ; height="20" ;>
+                    </a>
+                    <a class="mail" href="mailto:info@exceptionpastry.com">
+                        info@exceptionpastry.com
+                    </a>
+                    <a class="mail" href="mailto:export@exceptionpastry.com">
+                        export@exceptionpastry.com
+                    </a>
                 </div>
-                <img class="payment_icons" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_icons.png" alt="">
+                <img class="payment_icons"
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_icons.png" alt="">
             </div>
         </div>
         <div class="bottom">
             <div class="bottom_text">
-                <p class="copy_right"> <?php echo ($language == 'en')? 'All Copyrights belong to Exception 2023 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٣' ?>©<?php echo date('Y');?></p>
+                <p class="copy_right">
+                    <?php echo ($language == 'en')? 'All Copyrights belong to Exception 2024 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٤' ?>©<?php echo date('Y');?>
+                </p>
             </div>
 
             <div class="mitchdesigns-logo">
@@ -161,7 +177,7 @@ global $language;
                     </div>
                     <p>Web Design by MitchDesigns</p>
                 </a>
-            </div>  
+            </div>
         </div>
     </div>
 </div>
