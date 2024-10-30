@@ -179,7 +179,7 @@ global $language;
                 <img class="payment_icons"
                     src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_icons.png" alt="">
                 <p class="copy_right">©
-                    <?php echo date('Y');?><?php echo ($language == 'en')? 'All Copyrights belong to Exception 2024 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٤' ?>
+                    <?php echo ($language == 'en')? 'All Copyrights belong to Exception 2024 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٤' ?>
                 </p>
             </div>
 
