@@ -14017,6 +14017,7 @@ body.sticky-filter .section_filter {
             display: flex;
             align-items: center;
             font-size: 22px;
+            direction: ltr;
             justify-content: flex-start; }
             [dir="rtl"] .section_footer .top .section_start .menu .single_menu .hotline_and_email .hotline {
               justify-content: flex-end; }
