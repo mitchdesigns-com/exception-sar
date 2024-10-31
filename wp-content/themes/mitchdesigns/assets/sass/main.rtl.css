@@ -14018,7 +14018,10 @@ body.sticky-filter .section_filter {
             align-items: center;
             font-size: 22px;
             direction: ltr;
-            justify-content: end; }
+            justify-content: flex-start; }
+            [dir="rtl"] .section_footer .top .section_start .menu .single_menu .hotline_and_email .hotline {
+              direction: rtl;
+              justify-content: flex-end; }
             .section_footer .top .section_start .menu .single_menu .hotline_and_email .hotline img {
               margin: 0 10px; }
     .section_footer .top .section_end {
