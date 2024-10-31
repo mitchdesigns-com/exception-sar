@@ -368,7 +368,7 @@
                     &::before{
                         content: '';
                         position: absolute;
-                        background: linear-gradient(180deg, rgb(34 34 34 / 0%) 0%, #222222 100%);
+                        background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #222222 100%);
                         top: 230px;
                         bottom: 0;
                         right: 0;

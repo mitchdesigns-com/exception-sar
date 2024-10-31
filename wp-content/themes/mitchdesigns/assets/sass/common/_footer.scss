@@ -163,13 +163,20 @@
                         }
                     }
                     .hotline_and_email{
-                        .hotline{
+                        .hotline {
                             display: flex;
                             align-items: center;
                             font-size: 22px;
-                            direction: ltr; 
-                            justify-content: end;
-                            img{
+                            direction: ltr; // Default to LTR
+                            justify-content: flex-start; // Aligns left for LTR
+                        
+                            // Adjust alignment for RTL
+                            [dir="rtl"] & {
+                                direction: rtl;
+                                justify-content: flex-end;
+                            }
+                        
+                            img {
                                 margin: 0 10px;
                             }
                         }
