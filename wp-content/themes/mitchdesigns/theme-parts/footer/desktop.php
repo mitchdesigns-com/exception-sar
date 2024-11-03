@@ -90,14 +90,13 @@ global $language;
                         </li>
                         <?php } } ?>
                         <li class="hotline_and_email">
-                            <a class="hotline" href="tel:+02 16687">
+                            <a class="hotline" href="tel:0532911750">
                                 <img src="<?php echo get_field('icon_call', 'options')  ?>" alt="" Width="20" ;
                                     height="20" ;>
-                                +02 16687
-
+                                0532911750
                             </a>
-                            <a class="mail" href="mailto:info@exceptionpastry.com">
-                                info@exceptionpastry.com
+                            <a class="mail" href="mailto:Info-ksa@exceptionpastry.com">
+                                Info-ksa@exceptionpastry.com
                             </a>
                             <a class="mail" href="mailto:export@exceptionpastry.com">
                                 export@exceptionpastry.com
