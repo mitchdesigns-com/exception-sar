@@ -14221,10 +14221,12 @@ body.sticky-filter .section_filter {
         line-height: 22px;
         color: #ffffff;
         width: 100%;
-        transform: translateX(-10px); }
+        transform: translateX(-10px);
+        direction: ltr; }
         body.ltr .section_footer_mobile .top .section_end .hotline_and_email .hotline {
           flex-direction: row-reverse;
-          transform: translateX(-5px); }
+          transform: translateX(-5px);
+          direction: rtl; }
         .section_footer_mobile .top .section_end .hotline_and_email .hotline img {
           margin: 0 5px;
           vertical-align: sub; }
