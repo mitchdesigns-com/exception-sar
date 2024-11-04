@@ -443,9 +443,11 @@
                     color: #ffffff;
                     width: 100%;
                     transform: translateX(-10px);
+                    direction: ltr;
                     body.ltr & {
                         flex-direction: row-reverse;
                         transform: translateX(-5px);
+                        direction: rtl;
                     }
                     img{
                         margin: 0 5px;
