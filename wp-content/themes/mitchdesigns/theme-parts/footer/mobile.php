@@ -152,8 +152,8 @@ global $language;
                         <img src="<?php echo get_field('icon_call', 'options')  ?>" alt="" Width="20" ; height="20" ;>
 
                         0532911750 </a>
-                    <a class="mail" href="mailto:info@exceptionpastry.com">
-                        info@exceptionpastry.com
+                    <a class="mail" href="mailto:Info-ksa@exceptionpastry.com">
+                        Info-ksa@exceptionpastry.com
                     </a>
                     <a class="mail" href="mailto:export@exceptionpastry.com">
                         export@exceptionpastry.com
