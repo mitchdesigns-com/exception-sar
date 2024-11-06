@@ -160,7 +160,7 @@ global $language;
                     </a>
                 </div>
                 <img class="payment_icons"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_icons.png" alt="">
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_new.png" alt="">
             </div>
         </div>
         <div class="bottom">
