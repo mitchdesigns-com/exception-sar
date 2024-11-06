@@ -177,7 +177,7 @@ global $language;
             </div>
             <div class="website_details">
                 <img class="payment_icons"
-                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_icons.png" alt="">
+                    src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/payments/payment_new.png" alt="">
                 <p class="copy_right">©
                     <?php echo ($language == 'en')? 'All Copyrights belong to Exception 2024 ':'جميع حقوق النشر تنتمي إلى إكسبشن ٢٠٢٤' ?>
                 </p>
