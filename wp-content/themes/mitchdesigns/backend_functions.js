@@ -2456,22 +2456,24 @@ $(document).ready(function() {
     $("#branch_submit button").attr("disabled", true);
     $('#ajax_loader').show();  
     const gover_en = $firstRadio.attr('id')
-    $.ajax({
-      type: 'POST',
-      dataType: 'JSON',
-      url: mitch_ajax_url,
-      data: {
-          action: "MD_get_areas_related_gover",
-          gover_en: gover_en ,
-          lang : current_lang ,
-      },
-      success: function (data) {
-  
-        $('#area').html(data.areas_dropdown);
-        $('#street').html(data.street);
-        $('#ajax_loader').hide();  
-      }
-  })
-  }
+    if (gover_en != null) {
+      $.ajax({
+        type: 'POST',
+        dataType: 'JSON',
+        url: mitch_ajax_url,
+        data: {
+            action: "MD_get_areas_related_gover",
+            gover_en: gover_en ,
+            lang : current_lang ,
+        },
+        success: function (data) {
+    
+          $('#area').html(data.areas_dropdown);
+          $('#street').html(data.street);
+          $('#ajax_loader').hide();  
+        }
+      })
+    }
+}
 
 });
