@@ -657,123 +657,135 @@ function mitch_get_cart_content($lang){
           </div>
         </div>
       </div>
-      <div class="button_action">
-          <a class="open_checkout" href="' ;
-              $checout_url = home_url();
-              if($lang == 'en'){  $checout_url = home_url('checkout/?lang=en') ;} else {$checout_url = home_url('checkout');}
-            
-              $cart_content = $cart_content . $checout_url . '"
-            <button type="button"> '.cart_page('order_now' , $lang).' </button>
-          </a>
-          <a class="open_cart" href="';
-              $cart_url = home_url();
-              if($lang == 'en'){  $cart_url = home_url('cart/?lang=en') ;} else {$cart_url = home_url('cart');}
-            
-              $cart_content = $cart_content . $cart_url . '"
-            <button type="button"> '.cart_page('cart_page' , $lang).'</button>
-          </a>
-      </div>
-      
-    </div>
-  </div>
-  ';
-    return $cart_content;
+    <div class="button_action">
+    <a class="open_checkout" href="<?php 
+        $checout_url = home_url();
+        if($lang == 'en'){  
+            $checout_url = home_url('checkout/?lang=en');
+        } else {
+            $checout_url = home_url('checkout');
+        }
+        echo $checout_url;
+    ?>">
+<?php echo cart_page('order_now', $lang); ?>
+</a>
+<a class="open_cart" href="<?php 
+        $cart_url = home_url();
+        if($lang == 'en'){  
+            $cart_url = home_url('cart/?lang=en');
+        } else {
+            $cart_url = home_url('cart');
+        }
+        echo $cart_url;
+    ?>">
+    <?php echo cart_page('cart_page', $lang); ?>
+</a>
+</div>
+
+
+</div>
+</div>
+';
+return $cart_content;
 }
 
 function mitch_repeat_order(){
-  if($_SERVER['REQUEST_METHOD'] == 'POST'){
-    if($_POST['action'] == 'repeat_order'){
-      // $new_order_id = mitch_create_order_from(intval($_POST['order_id']));
-      // if($new_order_id){
-      //   wp_redirect(home_url('my-account/orders-list/?order_id='.$new_order_id.''));
-      //   exit;
-      // }
-      // var_dump($_POST);
-      // exit;
-      if($_POST['repeat_action'] == 'no_items'){
-        WC()->cart->empty_cart();
-      }
-      $custom_cart_data = array();
-      $r_order_obj      = wc_get_order(intval($_POST['order_id']));
-      foreach($r_order_obj->get_items() as $cart_item_key => $values){
-        if(!empty($values['custom_cart_data'])){
-  				$items_data = $values['custom_cart_data'];
-  				if(!empty($items_data['visit_type'])){
-            $custom_cart_data['visit_type'] = $items_data['visit_type'];
-  				}
-  				if(!empty($items_data['visit_branch'])){
-            $custom_cart_data['visit_branch'] = $items_data['visit_branch'];
-  				}
-  				if(!empty($items_data['visit_home'])){
-            $custom_cart_data['visit_home'] = $items_data['visit_home'];
-  				}
-          if(!empty($items_data['attributes_keys'])){
-            $custom_cart_data['attributes_keys'] = $items_data['attributes_keys'];
-  				}
-          if(!empty($items_data['attributes_vals'])){
-            $custom_cart_data['attributes_vals'] = $items_data['attributes_vals'];
-  				}
-          $total_price = 0;
-          // echo '<pre>';
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if($_POST['action'] == 'repeat_order'){
+// $new_order_id = mitch_create_order_from(intval($_POST['order_id']));
+// if($new_order_id){
+// wp_redirect(home_url('my-account/orders-list/?order_id='.$new_order_id.''));
+// exit;
+// }
+// var_dump($_POST);
+// exit;
+if($_POST['repeat_action'] == 'no_items'){
+WC()->cart->empty_cart();
+}
+$custom_cart_data = array();
+$r_order_obj = wc_get_order(intval($_POST['order_id']));
+foreach($r_order_obj->get_items() as $cart_item_key => $values){
+if(!empty($values['custom_cart_data'])){
+$items_data = $values['custom_cart_data'];
+if(!empty($items_data['visit_type'])){
+$custom_cart_data['visit_type'] = $items_data['visit_type'];
+}
+if(!empty($items_data['visit_branch'])){
+$custom_cart_data['visit_branch'] = $items_data['visit_branch'];
+}
+if(!empty($items_data['visit_home'])){
+$custom_cart_data['visit_home'] = $items_data['visit_home'];
+}
+if(!empty($items_data['attributes_keys'])){
+$custom_cart_data['attributes_keys'] = $items_data['attributes_keys'];
+}
+if(!empty($items_data['attributes_vals'])){
+$custom_cart_data['attributes_vals'] = $items_data['attributes_vals'];
+}
+$total_price = 0;
+// echo '
+<pre>';
           // var_dump($values);
           // echo '</pre>';
-          // exit;
-          if(!empty($items_data['variations_ids'])){
-            foreach($items_data['variations_ids'] as $variation_id){
-              $total_price = $total_price + (float)get_post_meta($variation_id, '_price', true);
-            }
-          }
-          $custom_cart_data['custom_total'] = $total_price;
-          $custom_cart_data_arr             = array('custom_cart_data' => $custom_cart_data);
-          // echo '<pre>';
+// exit;
+if(!empty($items_data['variations_ids'])){
+foreach($items_data['variations_ids'] as $variation_id){
+$total_price = $total_price + (float)get_post_meta($variation_id, '_price', true);
+}
+}
+$custom_cart_data['custom_total'] = $total_price;
+$custom_cart_data_arr = array('custom_cart_data' => $custom_cart_data);
+// echo '
+<pre>';
           // var_dump($custom_cart_data_arr);
           // echo '</pre>';
-          // exit;
-          $added_to_cart = WC()->cart->add_to_cart($values['product_id'], 1, $variation_id, wc_get_product_variation_attributes($variation_id), $custom_cart_data_arr);
-  			}else{
-          if(!empty($values['variation_id'])){
-            $product_id = $values['variation_id'];
-          }else{
-            $product_id = $values['product_id'];
-          }
-          $added_to_cart   = WC()->cart->add_to_cart($product_id, $values['quantity']);
-        }
-      }
-      if($added_to_cart){
-        wp_redirect(home_url('cart'));
-        exit;
-      }
-    }
-    wp_redirect(home_url('my-account/orders-list/?order_id='.intval($_POST['order_id']).'&response=error'));
-    exit;
-  }
+// exit;
+$added_to_cart = WC()->cart->add_to_cart($values['product_id'], 1, $variation_id,
+wc_get_product_variation_attributes($variation_id), $custom_cart_data_arr);
+}else{
+if(!empty($values['variation_id'])){
+$product_id = $values['variation_id'];
+}else{
+$product_id = $values['product_id'];
+}
+$added_to_cart = WC()->cart->add_to_cart($product_id, $values['quantity']);
+}
+}
+if($added_to_cart){
+wp_redirect(home_url('cart'));
+exit;
+}
+}
+wp_redirect(home_url('my-account/orders-list/?order_id='.intval($_POST['order_id']).'&response=error'));
+exit;
+}
 }
 
 //update cart prices to rate price
 /*add_action( 'woocommerce_before_calculate_totals', 'add_custom_item_price', 10 );
 function add_custom_item_price($cart_object){
-  foreach($cart_object->get_cart() as $item_values){
-    ## Set the new item price in cart
-    // $item_values['data']->set_price(mitch_get_product_price_after_rate($item_values['data']->price));
-    @$item_values['data']->set_price($item_values['data']->price);
-  }
+foreach($cart_object->get_cart() as $item_values){
+## Set the new item price in cart
+// $item_values['data']->set_price(mitch_get_product_price_after_rate($item_values['data']->price));
+@$item_values['data']->set_price($item_values['data']->price);
+}
 }*/
 
 function mitch_get_cart_content_fresh(){
 
-  $lang = $_POST['lang'];
+$lang = $_POST['lang'];
 
 
 
-  $response = array(
-    'status'       => 'success',
-    'cart_count'   => WC()->cart->get_cart_contents_count(),
-    'cart_content' => mitch_get_cart_content($lang),
-    'cart_subtotal' => WC()->cart->subtotal,
-    'lang'          => $lang,
-  );
-  echo json_encode($response);
-  wp_die();
+$response = array(
+'status' => 'success',
+'cart_count' => WC()->cart->get_cart_contents_count(),
+'cart_content' => mitch_get_cart_content($lang),
+'cart_subtotal' => WC()->cart->subtotal,
+'lang' => $lang,
+);
+echo json_encode($response);
+wp_die();
 }
 add_action('wp_ajax_get_cart_content_fresh', 'mitch_get_cart_content_fresh');
 add_action('wp_ajax_nopriv_get_cart_content_fresh', 'mitch_get_cart_content_fresh');
