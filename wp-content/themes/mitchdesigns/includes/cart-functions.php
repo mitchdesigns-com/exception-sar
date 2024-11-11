@@ -658,12 +658,12 @@ function mitch_get_cart_content($lang){
         </div>
       </div>
       <div class="button_action">
-          <a class="open_checkout"  href="javascript:void(0);" onclick="window.location.href = '  ;
+          <a class="open_checkout" href="' ;
               $checout_url = home_url();
               if($lang == 'en'){  $checout_url = home_url('checkout/?lang=en') ;} else {$checout_url = home_url('checkout');}
             
               $cart_content = $cart_content . $checout_url . '"
-        ' . cart_page('order_now', $lang) . '
+            <button type="button"> '.cart_page('order_now' , $lang).' </button>
           </a>
           <a class="open_cart" href="';
               $cart_url = home_url();
