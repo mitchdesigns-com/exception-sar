@@ -2449,31 +2449,31 @@ console.log("Js Loaded ");
 
 
 
-$(document).ready(function() {
-  console.log("Js Loaded 1");
-  const $firstRadio = $('.gover-checkbox').first(); 
-  if ($firstRadio.length) {
-    $("#branch_submit button").attr("disabled", true);
-    $('#ajax_loader').show();  
-    const gover_en = $firstRadio.attr('id')
-    if (gover_en != null) {
-      $.ajax({
-        type: 'POST',
-        dataType: 'JSON',
-        url: mitch_ajax_url,
-        data: {
-            action: "MD_get_areas_related_gover",
-            gover_en: gover_en ,
-            lang : current_lang ,
-        },
-        success: function (data) {
+// $(document).ready(function() {
+//   console.log("Js Loaded 1");
+//   const $firstRadio = $('.gover-checkbox').first(); 
+//   if ($firstRadio.length) {
+//     $("#branch_submit button").attr("disabled", true);
+//     $('#ajax_loader').show();  
+//     const gover_en = $firstRadio.attr('id')
+//     if (gover_en != null) {
+//       $.ajax({
+//         type: 'POST',
+//         dataType: 'JSON',
+//         url: mitch_ajax_url,
+//         data: {
+//             action: "MD_get_areas_related_gover",
+//             gover_en: gover_en ,
+//             lang : current_lang ,
+//         },
+//         success: function (data) {
     
-          $('#area').html(data.areas_dropdown);
-          $('#street').html(data.street);
-          $('#ajax_loader').hide();  
-        }
-      })
-    }
-}
+//           $('#area').html(data.areas_dropdown);
+//           $('#street').html(data.street);
+//           $('#ajax_loader').hide();  
+//         }
+//       })
+//     }
+// }
 
-});
+// });
