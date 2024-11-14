@@ -76,7 +76,7 @@ foreach ($cities as $one_city) {
   <script>
     if (window.location.href.indexOf('checkout') > -1) {
       $("#billing_state").change();
-      let selected_gov = 1;
+      let selected_gov = 5;
     }
     if (window.location.href.indexOf('my-account/addresses') > -1) {
       $("#country").change();

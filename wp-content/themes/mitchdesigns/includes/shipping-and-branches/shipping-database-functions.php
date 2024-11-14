@@ -66,6 +66,12 @@ $area_info = $wpdb->get_row("SELECT * FROM pwa_shipping_area WHERE area_id = {$a
 return $area_info;
 
 }
+function MD_Get_street_by_street_id($street_id){
+global $wpdb;
+$street_info = $wpdb->get_row("SELECT * FROM pwa_shipping_street WHERE street_id = {$street_id}" );
+  return $street_info;
+ }
+
 
 // Shipping Address Functions 
 function get_gov_name_by_id($gov_id){

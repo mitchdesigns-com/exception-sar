@@ -1651,7 +1651,7 @@ $(document.body).on("change","#billing_street", function () {
 $("#billing_state,#country").on("change", function () {
   let selected_gov  = $(this).find(':selected').data('id');
   if(!selected_gov ){
-    selected_gov = 1;
+    selected_gov = 5;
   }
   $('#ajax_loader').show();
   $.ajax({
@@ -1674,7 +1674,7 @@ $("#billing_state,#country").on("change", function () {
       $('#ajax_loader').hide();
     },
   });
-
+  
 });
 
 
@@ -2052,6 +2052,7 @@ $(document).on('click', '.button_action', function(e){
       success: function (data) {
         let arabic_cookie_value =   data.branch_ar + ' - ' + data.area_ar ;
         let english_cookie_value =  data.branch_en + ' - ' +  data.area_en ;
+        let data_for_address =   data.branch_ar + ' - ' + data.area_ar + ' - ' + data.street_ar;
 
         //Erase Cookie 
         eraseCookie('branch_name_ar');
@@ -2062,8 +2063,8 @@ $(document).on('click', '.button_action', function(e){
         setCookie('branch_name_ar' , arabic_cookie_value , 7);
         setCookie('branch_name_en' , english_cookie_value , 7);
         setCookie('branch_id' , data.branch_id , 7);
+        setCookie('data_for_address' , data_for_address);
         window.location.reload();
-
        
       },
     });
@@ -2496,3 +2497,54 @@ $(document).ready(function() {
 }
 
 });
+
+
+function getDataAddressFormCookies(){
+  let data = getCookie('data_for_address');
+  if (data) {
+    data= data.split('-');
+  }else{
+    data = false;
+  }
+  return data;
+
+}
+
+// function displayDatainCheckout(){
+//   let data = getDataAddressFormCookies();
+//   if (data) {
+//     let gov = data[0];
+//     let city = data[1];
+//     let street = data[2];
+//     let billing_state = $('#billing_state');
+//     let billing_city = $('#billing_city');
+//     let billing_street = $('#billing_street');
+
+//     billing_state.find('option').each(function() {
+//       if ($(this).text().trim() == gov.replace("فرع", "").trim()) {
+//         $(this).prop('selected', true); 
+//       }
+//     });
+
+//     billing_city.find('option').each(function() {
+//       if ($(this).text().trim() == street.trim()) {
+//         $(this).prop('selected', true); 
+//       }
+//     });
+
+//     // billing_street.find('option').each(function() {
+//     //   // alert($(this).text().trim() +' '+ city.trim())
+//     //   if ($(this).text().trim() == city.trim() || $(this).text().trim() == 'ختر الحي') {
+//     //     $(this).prop('selected', true); 
+//     //   }
+//     // });
+
+
+//     // billing_state.value = gov;
+//     // billing_city.value = street;
+//     // billing_street.value = city;
+
+//     // alert(gov + city +street );
+//   }
+
+// }

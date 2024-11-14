@@ -69,12 +69,15 @@ function MD_Get_matched_branch(){
 
     $matched_branch = MD_Get_branch_by_street($street);
     $area_info = MD_Get_area_by_area_id($area);
+    $street_info = MD_Get_street_by_street_id($street);
     $response = array(
         'status' => 'success',
         'area_en'    => $area_info->area_name_en,
         'area_ar'    => $area_info->area_name_ar,
         'branch_en'  => $matched_branch->branch_name_en,
         'branch_ar'  => $matched_branch->branch_name_ar,
+        'street_en'  => $street_info->street_name_en,
+        'street_ar'  => $street_info->street_name_ar,
         'branch_id'  => $matched_branch->branch_id,
 
       );
@@ -82,8 +85,8 @@ function MD_Get_matched_branch(){
      wp_die();
    
    }
-   
 
+   
    
 add_action('wp_ajax_nopriv_get_city', 'get_city');
 add_action('wp_ajax_get_city', 'get_city');
