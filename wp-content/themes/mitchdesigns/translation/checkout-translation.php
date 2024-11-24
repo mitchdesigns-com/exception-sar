@@ -27,8 +27,8 @@ function checkout_translate($phrase , $language){
     static $thanks_page_translation = array(
         'thanks_title_en'                     =>'Thank You',                             'thanks_title_ar'                     =>'شكرا لك',
         'thanks_subtitle_en'                  =>'You Order Has been Recieved',           'thanks_subtitle_ar'                  =>'تم تقديم طلبك بنجاح',
-        'thanks_contact_en'                   =>"If you have questions about your order, you can email us at info@exceptionpastry.com or call us at +02 16687",
-        'thanks_contact_ar'                   =>"إذا كانت لديك أسئلة حول طلبك ، يمكنك مراسلتنا عبر البريد الإلكتروني على info@exceptionpastry.com او اتصل بنا علي +02 16687",
+        'thanks_contact_en'                   =>"If you have questions about your order, you can email us at Info-ksa@exceptionpastry.com or call us at +0532911750",
+        'thanks_contact_ar'                   =>"إذا كانت لديك أسئلة حول طلبك ، يمكنك مراسلتنا عبر البريد الإلكتروني على Info-ksa@exceptionpastry.com او اتصل بنا علي +0532911750",
         'thanks_phone_en'                     =>'or call us at ',                        'thanks_phone_ar'                     =>'أو الاتصال بنا على',
         'thanks_order_en'                     =>'Order Number',                          'thanks_order_ar'                     =>'طلب رقم', 
         'thanks_user_info_title_en'           =>'Your Info.',                            'thanks_user_info_title_ar'           =>'بيانات العميل ',   
