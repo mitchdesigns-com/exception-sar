@@ -2468,13 +2468,17 @@ function getCookie(name) {
 
 $(document).ready(function() {
   console.log("Js Loaded 1");
-  const $firstRadio = $('.gover-checkbox').first(); 
+  let $firstRadio = $('.gover-checkbox').first(); 
   if ($firstRadio.length) {
-    const gover_en = $firstRadio.attr('id')
-    let branchId = getCookie('branch_id') ?? false ;
+    let gover_en = $firstRadio.attr('id') ?? 5
+    // alert(gover_en);
+    let branchId = getCookie('branch_id') || false;
+    let branch_name_ar = getCookie('branch_name_ar') || false;
+    let branch_name_en = getCookie('branch_name_en') || false;
+    let data_for_address = getCookie('data_for_address') || false;
 
     // alert(branchId);
-    if (gover_en != null && branchId == false) {
+    // if (gover_en != null && branchId == false) {
       $("#branch_submit button").attr("disabled", true);
       $('#ajax_loader').show();  
       $.ajax({
@@ -2493,7 +2497,15 @@ $(document).ready(function() {
           $('#ajax_loader').hide();  
         }
       })
-    }
+
+      // alert(branch_name_ar)
+      if (branchId) {
+        setCookie('branch_name_ar' , branch_name_ar , 7);
+        setCookie('branch_name_en' , branch_name_en , 7);
+        setCookie('branch_id' , branchId , 7);
+        setCookie('data_for_address' , data_for_address , 7);
+      }
+    // }
 }
 
 });
