@@ -421,6 +421,8 @@ if(mitch_ajax_url){
   $('#remove_coupon').on('click', function () {
     $('#ajax_loader').show();
     var coupon_code = $('#coupon_code').val();
+
+
     if(coupon_code){
       $.ajax({
         type: 'POST',
@@ -501,6 +503,7 @@ if(mitch_ajax_url){
           //   timer: 1500
           // });
         }
+
       });
     }else{
       $('#ajax_loader').hide();
@@ -512,6 +515,7 @@ if(mitch_ajax_url){
       //   timer: 1500
       // });
     }
+
   });
 
   function add_product_to_wishlist(product_id, refresh_page = 'NULL'){
@@ -2030,7 +2034,7 @@ $(document.body).on("change", "#street", function () {
 });
 
 // Creating a Cookie Or Updating a Cookie Request 
-$(document).on('click', '.button_action', function(e){
+$(document).on('click', '#branch_submit', function(e){
 // //$('.button_action').on("click", function () {
 //   $("#branch_submit").on("click", function () {
   let area = $('#area').find(":selected").val();
@@ -2050,6 +2054,7 @@ $(document).on('click', '.button_action', function(e){
         street : street ,
       },
       success: function (data) {
+        // alert(data.branch_ar);
         let arabic_cookie_value =   data.branch_ar + ' - ' + data.area_ar ;
         let english_cookie_value =  data.branch_en + ' - ' +  data.area_en ;
         let data_for_address =   data.branch_ar + ' - ' + data.area_ar + ' - ' + data.street_ar;
@@ -2478,7 +2483,7 @@ $(document).ready(function() {
     let data_for_address = getCookie('data_for_address') || false;
 
     // alert(branchId);
-    if (gover_en != null && branchId == false) {
+    // if (gover_en != null && branchId == false) {
       $("#branch_submit button").attr("disabled", true);
       $('#ajax_loader').show();  
       $.ajax({
@@ -2506,7 +2511,7 @@ $(document).ready(function() {
         setCookie('data_for_address' , data_for_address , 7);
       }
     }
-}
+// }
 
 });
 
