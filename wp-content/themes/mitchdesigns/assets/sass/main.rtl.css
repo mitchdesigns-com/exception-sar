@@ -10041,13 +10041,19 @@ img {
                   .thanks_page .order_review-content #order_review_thanks .shop_table .product-thumb-name .product-name-container .left .amount bdi {
                     font-size: 12px; } }
 
-.woocommerce-thankyou-order-received {
+body.rtl .woocommerce-thankyou-order-received,
+html[lang="ar"] .woocommerce-thankyou-order-received {
   text-align: right;
   direction: rtl; }
+  body.rtl .woocommerce-thankyou-order-received span[dir="ltr"],
+  html[lang="ar"] .woocommerce-thankyou-order-received span[dir="ltr"] {
+    display: inline-block;
+    unicode-bidi: embed; }
 
-.woocommerce-thankyou-order-received span[dir="ltr"] {
-  display: inline-block;
-  unicode-bidi: embed; }
+body:not(.rtl) .woocommerce-thankyou-order-received,
+html:not([lang="ar"]) .woocommerce-thankyou-order-received {
+  text-align: left;
+  direction: ltr; }
 
 .page_wishlist {
   padding: 0 20px; }
