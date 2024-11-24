@@ -9447,6 +9447,7 @@ img {
         .thanks_page .left .subtitle {
           font-size: 14px; } }
     .thanks_page .left .desc {
+      max-width: 493px;
       color: #777777;
       font-weight: 500;
       font-size: 14px;
@@ -10039,6 +10040,14 @@ img {
                 @media (max-width: 767px) {
                   .thanks_page .order_review-content #order_review_thanks .shop_table .product-thumb-name .product-name-container .left .amount bdi {
                     font-size: 12px; } }
+
+.woocommerce-thankyou-order-received {
+  text-align: right;
+  direction: rtl; }
+
+.woocommerce-thankyou-order-received span[dir="ltr"] {
+  display: inline-block;
+  unicode-bidi: embed; }
 
 .page_wishlist {
   padding: 0 20px; }

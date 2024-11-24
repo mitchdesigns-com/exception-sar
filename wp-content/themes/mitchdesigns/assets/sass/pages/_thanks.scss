@@ -39,6 +39,7 @@
             }
         }
         .desc {
+             max-width: 493px; 
             color: #777777;
             font-weight: 500;
             font-size: 14px;
@@ -819,4 +820,12 @@
             }
         }
     }
+}.woocommerce-thankyou-order-received {
+    text-align: right;
+    direction: rtl;
+}
+
+.woocommerce-thankyou-order-received span[dir="ltr"] {
+    display: inline-block;
+    unicode-bidi: embed;
 }
