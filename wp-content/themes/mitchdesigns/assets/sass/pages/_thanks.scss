@@ -820,12 +820,27 @@
             }
         }
     }
-}.woocommerce-thankyou-order-received {
-    text-align: right;
-    direction: rtl;
 }
 
-.woocommerce-thankyou-order-received span[dir="ltr"] {
-    display: inline-block;
-    unicode-bidi: embed;
+// تطبيق التنسيق فقط عندما تكون اللغة العربية
+body.rtl,
+html[lang="ar"] {
+    .woocommerce-thankyou-order-received {
+        text-align: right;
+        direction: rtl;
+
+        span[dir="ltr"] {
+            display: inline-block;
+            unicode-bidi: embed;
+        }
+    }
+}
+
+// للغات الأخرى (LTR)
+body:not(.rtl),
+html:not([lang="ar"]) {
+    .woocommerce-thankyou-order-received {
+        text-align: left;
+        direction: ltr;
+    }
 }
