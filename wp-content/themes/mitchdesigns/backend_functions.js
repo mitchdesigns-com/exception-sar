@@ -2478,7 +2478,7 @@ $(document).ready(function() {
     let data_for_address = getCookie('data_for_address') || false;
 
     // alert(branchId);
-    // if (gover_en != null && branchId == false) {
+    if (gover_en != null && branchId == false) {
       $("#branch_submit button").attr("disabled", true);
       $('#ajax_loader').show();  
       $.ajax({
@@ -2505,7 +2505,7 @@ $(document).ready(function() {
         setCookie('branch_id' , branchId , 7);
         setCookie('data_for_address' , data_for_address , 7);
       }
-    // }
+    }
 }
 
 });
