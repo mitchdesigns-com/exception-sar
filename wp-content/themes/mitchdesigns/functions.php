@@ -363,19 +363,19 @@ function custom_jwt_auth_expire($expire)
 //Mobile App Endpoints
 
 //Mobile App - My Account Functions
-require_once 'includes/mobile-app/myaccount.php';
-require_once 'includes/mobile-app/address.php';
-require_once 'includes/mobile-app/my-orders.php';
-require_once 'includes/mobile-app/wishlist.php';
+// require_once 'includes/mobile-app/myaccount.php';
+// require_once 'includes/mobile-app/address.php';
+// require_once 'includes/mobile-app/my-orders.php';
+// require_once 'includes/mobile-app/wishlist.php';
 
-//Branch System
-require_once 'includes/mobile-app/branch.php';
+// //Branch System
+// require_once 'includes/mobile-app/branch.php';
 
-// products
-require_once 'includes/mobile-app/product.php';
-require_once 'includes/mobile-app/checkout.php';
+// // products
+// require_once 'includes/mobile-app/product.php';
+// require_once 'includes/mobile-app/checkout.php';
 //Static Pages
-require_once 'includes/mobile-app/static-pages.php';
+// require_once 'includes/mobile-app/static-pages.php';
 
 
 function product_widget($product_id, $user_id , $branch_id)
